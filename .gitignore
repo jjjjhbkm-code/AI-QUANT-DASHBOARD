@@ -1,0 +1,17 @@
+#Environments
+venv/
+env/
+.env
+
+#Python cache
+__pycache__/
+*.py[cod]
+
+#Data and Models (Keep these local)
+backend/raw_prices.csv
+backend/stock_model.pth
+
+#OS files
+.DS_store
+Thumbs.db
+
