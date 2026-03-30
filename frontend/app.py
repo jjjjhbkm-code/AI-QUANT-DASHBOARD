@@ -7,9 +7,10 @@ import sys
 import os
 
 
-current_dir = os.path.dirname(os.p.abspath(__file__))
-parent_dir = os.path.dirname(current_dir)
-sys.path.append(parent_dir)
+
+
+
+
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
@@ -20,7 +21,8 @@ try:
     from backend.lstm_model import StockLSTM, prepare_data
     from backend.optimizer import run_portfolio_optimization
 except ModuleNotFoundError:
-    st.error("Backend modules not found. Check folder structure!")
+    st.error("Backend modules not found. Check your folder structure on GitHub!")
+
     
 
 import torch
