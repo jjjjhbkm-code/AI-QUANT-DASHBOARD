@@ -4,16 +4,16 @@ from lstm_model import prepare_data, StockLSTM
 
 
 def train_network(ticker = 'AAPL' , epochs = 20 , lr = 0.001):
-    #load data 
+  
     X , y , scaler = prepare_data("raw_prices.csv" , ticker)
     
-    #Initialize MODEL , Loss , Optimizer
+   
     model = StockLSTM()
     criterian = nn.MSELoss()
     optimizer = torch.optim.Adam(model.parameters() , lr = lr)
     
     
-    #The training loop
+    
     
     print(f"Starting training for {ticker}......")
     
