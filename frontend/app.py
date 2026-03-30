@@ -1,8 +1,27 @@
 import streamlit as st
+
+
 import pandas as pd
 import plotly.graph_objects as go
 import sys
 import os
+
+
+current_dir = os.path.dirname(os.p.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+sys.path.append(parent_dir)
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+sys.path.append(parent_dir)
+
+
+try:
+    from backend.lstm_model import StockLSTM, prepare_data
+    from backend.optimizer import run_portfolio_optimization
+except ModuleNotFoundError:
+    st.error("Backend modules not found. Check folder structure!")
+    
 
 import torch
 from backend.lstm_model import StockLSTM , prepare_data
